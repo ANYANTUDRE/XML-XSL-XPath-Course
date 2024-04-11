@@ -5,7 +5,7 @@
 - XML is a software- and hardware-independent tool for **storing and transporting data.**
 - XML was designed to be **self-descriptive** and is a **W3C Recommendation**.
 
-## XML does NOT DO anything
+### XML does NOT DO anything
 Indeed, XML is just information wrapped in tags.
 This note is a note to Tove from Jani, stored as XML:
 ```xml
@@ -18,23 +18,23 @@ This note is a note to Tove from Jani, stored as XML:
 ```
 The XML above has a sender information, a receiver information, a heading and a message body.
 
-## The difference between XML and HTML
+### The difference between XML and HTML
 XML and HTML were designed with different goals:
 - XML was designed to **carry data** - with focus on **what data is**.
 - HTML was designed to **display data** - with focus on **how data looks**.
 
 
-## XML does not use predefined tags
+### XML does not use predefined tags
 XML tags are **not predefined like HTML tags** are ( e.g., `<p>`, `<h1>`, `<table>` ).
 The tags are "invented" by the author of the XML document.
 
-## XML is extensible
+### XML is extensible
 Most XML applications will work as expected even if new data is added (or removed).
 
-## XML simplifies things
+### XML simplifies things
 XML simplifies **data sharing, data transport, platform changes, data availability.**
 
-## XML is a W3C Recommendation
+### XML is a W3C Recommendation
 
 
 # How Can XML be Used?
