@@ -46,7 +46,7 @@ XML simplifies **data sharing, data transport, platform changes, data availabili
 ## Transaction Data
 Thousands of XML formats exist, in many different industries, to describe day-to-day data transactions from financial transactions to medical data and scientific measurements.
 
-### Example: XML News
+#### Example: XML News
 XMLNews is a specification for exchanging news and other information.
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -68,7 +68,6 @@ XMLNews is a specification for exchanging news and other information.
   </body>
 </nitf>
 ```
-
 
 # XML Tree
 
@@ -372,6 +371,135 @@ Without any information about how to display the data, the browsers can just dis
 
 
 # XML HttpRequest
+All modern browsers have a built-in **XMLHttpRequest** object to request data from a server.
+
+## The XMLHttpRequest object
+The XMLHttpRequest object can be used to request data from a web server.
+The XMLHttpRequest object is a developers dream, because you can:
+- Update a web page without reloading the page
+- Request data from a server  - after the page has loaded
+- Receive data from a server  - after the page has loaded
+- Send data to a server - in the background
+
+## Sending an XMLHttpRequest
+A common JavaScript syntax for using the XMLHttpRequest object looks much like this:
+```js
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       // Typical action to be performed when the document is ready:
+       document.getElementById("demo").innerHTML = xhttp.responseText;
+    }
+};
+xhttp.open("GET", "filename", true);
+xhttp.send();
+```
+
+## Example Explained
+
+The first line in the example above creates an XMLHttpRequest object:
+```js
+var xhttp = new XMLHttpRequest();
+```
+The `onreadystatechange` property specifies a function to be executed every time the status of the XMLHttpRequest object changes:
+```js
+xhttp.onreadystatechange = function()
+```
+When **readyState** property is 4 and the status property is **200**, the response is ready:
+```js
+if (this.readyState == 4 && this.status == 200)
+```
+The **responseText** property returns the server response as a text string.
+The text string can be used to update a web page:
+```js
+document.getElementById("demo").innerHTML = xhttp.responseText;
+```
+
+
+# XML Parser
+
+# XML DOM
+
+# XML and XPath
+
+## What is XPath?
+XPath is a major element in the XSLT standard.
+XPath can be used to navigate through elements and attributes in an XML document.
+- XPath is a syntax for defining parts of an XML document
+- XPath uses path expressions to navigate in XML documents
+- XPath contains a library of standard functions
+- XPath is a major element in XSLT and in XQuery
+- XPath is a W3C recommendation
+
+## XPath Path Expressions
+XPath uses path expressions to select nodes or node-sets in an XML document. These path expressions look very much like the expressions you see when you work with a traditional computer file system.
+
+XPath expressions can be used in JavaScript, Java, XML Schema, PHP, Python, C and C++, and lots of other languages.
+
+## XPath is Used in XSLT
+XPath is a major element in the XSLT standard.
+
+With XPath knowledge you will be able to take great advantage of XSL.
+
+## XPath Example
+Considering the following XML document:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<bookstore>
+
+<book category="cooking">
+  <title lang="en">Everyday Italian</title>
+  <author>Giada De Laurentiis</author>
+  <year>2005</year>
+  <price>30.00</price>
+</book>
+
+<book category="children">
+  <title lang="en">Harry Potter</title>
+  <author>J K. Rowling</author>
+  <year>2005</year>
+  <price>29.99</price>
+</book>
+
+<book category="web">
+  <title lang="en">XQuery Kick Start</title>
+  <author>James McGovern</author>
+  <author>Per Bothner</author>
+  <author>Kurt Cagle</author>
+  <author>James Linn</author>
+  <author>Vaidyanathan Nagarajan</author>
+  <year>2003</year>
+  <price>49.99</price>
+</book>
+
+<book category="web">
+  <title lang="en">Learning XML</title>
+  <author>Erik T. Ray</author>
+  <year>2003</year>
+  <price>39.95</price>
+</book>
+
+</bookstore>
+```
+In the table below we have listed some XPath expressions and the result of the expressions:
+
+| XPath Expression | XPath Expression |
+|---------------------------------------|-------------------------------------------------------------------------|
+| /bookstore/book[1] | Selects the first book element that is the child of the bookstore element| 
+| /bookstore/book[last()]| Selects the last book element that is the child of the bookstore element|
+| /bookstore/book[last()-1]| Selects the last but one book element that is the child of the bookstore element|
+| /bookstore/book[position()<3] | Selects the first two book elements that are children of the bookstore element | 
+| //title[@lang]| Selects all the title elements that have an attribute named lang|
+| //title[@lang='en']| Selects all the title elements that have a "lang" attribute with a value of "en"|
+| /bookstore/book[price>35.00]| Selects all the book elements of the bookstore element that have a price element with a value greater than 35.00| 
+| /bookstore/book[price>35.00]/title| Selects all the title elements of the book elements of the bookstore element that have a price element with a value greater than 35.00|
+
+
+
+
+
 
 
 
